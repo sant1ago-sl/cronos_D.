@@ -69,7 +69,7 @@ export const router = createBrowserRouter([
         element: <GenericPage 
           title="Evaluaciones" 
           description="Tus quizzes y exámenes" 
-          icon={<FileText className="w-20 h-20 text-amber-700 mb-4" />}
+          icon={<FileText className="w-20 h-20 text-cyan-700 mb-4" />}
         />,
       },
       {
@@ -110,7 +110,7 @@ export const router = createBrowserRouter([
         element: <GenericPage 
           title="Estudiantes" 
           description="Gestiona tus estudiantes" 
-          icon={<Users className="w-20 h-20 text-amber-700 mb-4" />}
+          icon={<Users className="w-20 h-20 text-cyan-700 mb-4" />}
         />,
       },
       {
@@ -126,7 +126,7 @@ export const router = createBrowserRouter([
         element: <GenericPage 
           title="Personajes IA" 
           description="Crea y gestiona personajes históricos" 
-          icon={<Brain className="w-20 h-20 text-amber-700 mb-4" />}
+          icon={<Brain className="w-20 h-20 text-cyan-700 mb-4" />}
         />,
       },
       // Admin routes
@@ -143,7 +143,7 @@ export const router = createBrowserRouter([
         element: <GenericPage 
           title="Docentes" 
           description="Administra profesores y permisos" 
-          icon={<GraduationCap className="w-20 h-20 text-amber-700 mb-4" />}
+          icon={<GraduationCap className="w-20 h-20 text-cyan-700 mb-4" />}
         />,
       },
       {
@@ -159,7 +159,7 @@ export const router = createBrowserRouter([
         element: <GenericPage 
           title="Planes y Licencias" 
           description="Administra suscripciones y licencias" 
-          icon={<BookMarked className="w-20 h-20 text-orange-600 mb-4" />}
+          icon={<BookMarked className="w-20 h-20 text-cyan-700 mb-4" />}
         />,
       },
       {
@@ -175,7 +175,7 @@ export const router = createBrowserRouter([
         element: <GenericPage 
           title="Configuración IA" 
           description="Configura parámetros de inteligencia artificial" 
-          icon={<Brain className="w-20 h-20 text-amber-700 mb-4" />}
+          icon={<Brain className="w-20 h-20 text-cyan-700 mb-4" />}
         />,
       },
       {

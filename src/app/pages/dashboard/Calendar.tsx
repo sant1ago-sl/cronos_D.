@@ -30,8 +30,8 @@ export default function Calendar() {
   };
 
   const typeColors = {
-    assignment: 'bg-orange-100 text-orange-700 border-orange-300',
-    quiz: 'bg-amber-100 text-amber-800 border-amber-300',
+    assignment: 'bg-cyan-100 text-cyan-800 border-cyan-300',
+    quiz: 'bg-blue-100 text-blue-800 border-blue-300',
     class: 'bg-blue-100 text-blue-700 border-blue-300',
     event: 'bg-green-100 text-green-700 border-green-300'
   };
@@ -98,8 +98,8 @@ export default function Calendar() {
                         <div
                           key={idx}
                           className={`text-xs px-1 rounded truncate ${
-                            event.type === 'assignment' ? 'bg-orange-200' :
-                            event.type === 'quiz' ? 'bg-amber-200' :
+                            event.type === 'assignment' ? 'bg-cyan-200' :
+                            event.type === 'quiz' ? 'bg-blue-200' :
                             event.type === 'class' ? 'bg-blue-200' : 'bg-green-200'
                           }`}
                           title={event.title}
@@ -160,11 +160,11 @@ export default function Calendar() {
             </CardHeader>
             <CardContent className="space-y-2">
               <div className="flex items-center gap-2">
-                <div className="w-4 h-4 bg-orange-200 rounded" />
+                <div className="w-4 h-4 bg-cyan-200 rounded" />
                 <span className="text-sm">Tareas</span>
               </div>
               <div className="flex items-center gap-2">
-                <div className="w-4 h-4 bg-amber-200 rounded" />
+                <div className="w-4 h-4 bg-blue-200 rounded" />
                 <span className="text-sm">Evaluaciones</span>
               </div>
               <div className="flex items-center gap-2">

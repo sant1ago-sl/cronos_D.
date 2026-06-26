@@ -59,7 +59,7 @@ const modules = [
     icon: Landmark,
     title: 'Personajes históricos',
     description: 'Conversaciones con figuras como Pachacútec, Bolívar o Cleopatra para aprender desde distintas perspectivas.',
-    tone: 'text-amber-700 bg-amber-50'
+    tone: 'text-cyan-700 bg-cyan-50'
   },
   {
     icon: Layers3,
@@ -194,7 +194,7 @@ export default function Landing() {
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Link to="/login">
-                <Button size="lg" className="bg-amber-300 text-slate-950 hover:bg-amber-200">
+                <Button size="lg" className="bg-cyan-400 text-slate-950 hover:bg-cyan-300">
                   Entrar a la demo
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
@@ -211,10 +211,10 @@ export default function Landing() {
           <div className="mt-14 grid max-w-5xl grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {metrics.map((metric) => (
               <div key={metric.label} className="border border-white/15 bg-slate-950/35 p-4 shadow-lg backdrop-blur-md">
-                <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-lg bg-amber-300 text-slate-950">
+                <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-lg bg-cyan-400 text-slate-950">
                   <metric.icon className="h-5 w-5" />
                 </div>
-                <div className="text-sm font-semibold uppercase tracking-wide text-amber-200">{metric.label}</div>
+                <div className="text-sm font-semibold uppercase tracking-wide text-cyan-200">{metric.label}</div>
                 <div className="mt-1 text-2xl font-bold text-white">{metric.value}</div>
                 <p className="mt-2 text-sm leading-relaxed text-slate-200">{metric.detail}</p>
               </div>
@@ -304,7 +304,7 @@ export default function Landing() {
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
             {['Innovación tecnológica', 'Compromiso educativo', 'Accesibilidad digital', 'Ética en el uso de IA', 'Creatividad e interacción', 'Calidad y mejora continua'].map((item) => (
               <div key={item} className="flex items-center gap-3 border border-white/10 bg-white/5 p-4">
-                <Check className="h-5 w-5 text-amber-300" />
+                <Check className="h-5 w-5 text-cyan-300" />
                 <span className="text-sm">{item}</span>
               </div>
             ))}
@@ -322,9 +322,9 @@ export default function Landing() {
 
           <div className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-5">
             {plans.map((plan) => (
-              <Card key={plan.name} className={plan.featured ? 'border-amber-300 shadow-lg' : ''}>
+              <Card key={plan.name} className={plan.featured ? 'border-cyan-300 shadow-lg' : ''}>
                 <CardHeader>
-                  {plan.featured && <Badge className="mb-2 w-fit bg-amber-300 text-slate-950 hover:bg-amber-300">Más elegido</Badge>}
+                  {plan.featured && <Badge className="mb-2 w-fit bg-cyan-400 text-slate-950 hover:bg-cyan-400">Más elegido</Badge>}
                   <CardTitle>{plan.name}</CardTitle>
                   <CardDescription>
                     <span className="mt-3 block text-3xl font-bold text-slate-950">{plan.price}</span>

@@ -81,13 +81,13 @@ function StatCard({ label, value, detail, icon, tone = 'blue' }: {
   value: string | number;
   detail: string;
   icon: ReactNode;
-  tone?: 'blue' | 'green' | 'amber' | 'orange' | 'red' | 'slate';
+  tone?: 'blue' | 'green' | 'cyan' | 'teal' | 'red' | 'slate';
 }) {
   const tones = {
     blue: 'bg-blue-50 text-blue-700',
     green: 'bg-emerald-50 text-emerald-700',
-    amber: 'bg-amber-50 text-amber-700',
-    orange: 'bg-amber-50 text-amber-700',
+    cyan: 'bg-cyan-50 text-cyan-700',
+    teal: 'bg-teal-50 text-teal-700',
     red: 'bg-rose-50 text-rose-700',
     slate: 'bg-slate-100 text-slate-700'
   };
@@ -110,7 +110,7 @@ function StatusBadge({ value }: { value: string }) {
   const className = value === 'Alto' || value === 'Bloqueado'
     ? 'bg-rose-50 text-rose-700 border-rose-200'
     : value === 'Medio' || value === 'Programado'
-    ? 'bg-amber-50 text-amber-700 border-amber-200'
+    ? 'bg-cyan-50 text-cyan-700 border-cyan-200'
     : 'bg-emerald-50 text-emerald-700 border-emerald-200';
 
   return <Badge variant="outline" className={className}>{value}</Badge>;
@@ -238,7 +238,7 @@ export default function GenericPage({ title, description, icon }: GenericPagePro
               ['Calendario revisado', false]
             ].map(([label, done]) => (
               <div key={label as string} className="flex items-center gap-3">
-                {done ? <CheckCircle2 className="h-5 w-5 text-emerald-600" /> : <Clock className="h-5 w-5 text-amber-600" />}
+                {done ? <CheckCircle2 className="h-5 w-5 text-emerald-600" /> : <Clock className="h-5 w-5 text-cyan-700" />}
                 <span className="text-sm">{label}</span>
               </div>
             ))}
@@ -255,7 +255,7 @@ export default function GenericPage({ title, description, icon }: GenericPagePro
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <StatCard label="Evaluaciones activas" value={quizzes.length} detail="2 publicadas, 1 borrador" icon={<ClipboardList className="h-4 w-4" />} />
           <StatCard label="Promedio general" value="86.7" detail="Últimos 30 días" icon={<Award className="h-4 w-4" />} tone="green" />
-          <StatCard label="Banco de preguntas" value="214" detail="Historia, fuentes y mapas" icon={<FileText className="h-4 w-4" />} tone="amber" />
+          <StatCard label="Banco de preguntas" value="214" detail="Historia, fuentes y mapas" icon={<FileText className="h-4 w-4" />} tone="cyan" />
         </div>
         <Card>
           <CardHeader className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
@@ -339,8 +339,8 @@ export default function GenericPage({ title, description, icon }: GenericPagePro
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
           <StatCard label="Progreso promedio" value={`${average}%`} detail="Todos los cursos" icon={<TrendingUp className="h-4 w-4" />} />
           <StatCard label="Racha de estudio" value="12 días" detail="Meta: 20 minutos diarios" icon={<Activity className="h-4 w-4" />} tone="green" />
-          <StatCard label="Logros" value="8" detail="3 desbloqueados este mes" icon={<Award className="h-4 w-4" />} tone="orange" />
-          <StatCard label="Tareas al día" value="76%" detail="2 por entregar esta semana" icon={<CheckCircle2 className="h-4 w-4" />} tone="amber" />
+          <StatCard label="Logros" value="8" detail="3 desbloqueados este mes" icon={<Award className="h-4 w-4" />} tone="teal" />
+          <StatCard label="Tareas al día" value="76%" detail="2 por entregar esta semana" icon={<CheckCircle2 className="h-4 w-4" />} tone="cyan" />
         </div>
         <Card>
           <CardHeader>
@@ -381,7 +381,7 @@ export default function GenericPage({ title, description, icon }: GenericPagePro
             <div className="rounded-lg border bg-slate-50 p-4">
               <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
                 <div className="flex items-center gap-4">
-                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-blue-700 text-lg font-bold text-white ring-4 ring-amber-200">
+                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-blue-700 text-lg font-bold text-white ring-4 ring-cyan-200">
                     {initials || 'CD'}
                   </div>
                   <div>
@@ -486,7 +486,7 @@ export default function GenericPage({ title, description, icon }: GenericPagePro
           <StatCard label="Estudiantes" value={learnerRows.length} detail="En cursos activos" icon={<Users className="h-4 w-4" />} />
           <StatCard label="Promedio" value="80.0" detail="Cohorte actual" icon={<Award className="h-4 w-4" />} tone="green" />
           <StatCard label="Riesgo alto" value="1" detail="Requiere seguimiento" icon={<AlertCircle className="h-4 w-4" />} tone="red" />
-          <StatCard label="Actividad" value="76%" detail="Últimos 7 días" icon={<Activity className="h-4 w-4" />} tone="amber" />
+          <StatCard label="Actividad" value="76%" detail="Últimos 7 días" icon={<Activity className="h-4 w-4" />} tone="cyan" />
         </div>
         <Card>
           <CardHeader>
@@ -517,8 +517,8 @@ export default function GenericPage({ title, description, icon }: GenericPagePro
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
           <StatCard label="Participación" value="81%" detail="+6% vs semana anterior" icon={<Activity className="h-4 w-4" />} />
           <StatCard label="Finalización" value="68%" detail="Promedio de módulos" icon={<Target className="h-4 w-4" />} tone="green" />
-          <StatCard label="Uso Tutor IA" value="342" detail="Interacciones semanales" icon={<Brain className="h-4 w-4" />} tone="amber" />
-          <StatCard label="Alertas" value="7" detail="Necesitan revisión" icon={<AlertCircle className="h-4 w-4" />} tone="orange" />
+          <StatCard label="Uso Tutor IA" value="342" detail="Interacciones semanales" icon={<Brain className="h-4 w-4" />} tone="cyan" />
+          <StatCard label="Alertas" value="7" detail="Necesitan revisión" icon={<AlertCircle className="h-4 w-4" />} tone="teal" />
         </div>
         <div className="grid grid-cols-1 xl:grid-cols-2 gap-6">
           <Card>
@@ -544,7 +544,7 @@ export default function GenericPage({ title, description, icon }: GenericPagePro
             <CardContent className="space-y-3">
               {['Enviar recordatorio a estudiantes inactivos', 'Reforzar contenidos de culturas preincaicas', 'Publicar rúbrica del proyecto final'].map((action) => (
                 <div key={action} className="flex items-center gap-3 rounded-lg border p-3">
-                  <Sparkles className="h-4 w-4 text-amber-700" />
+                  <Sparkles className="h-4 w-4 text-cyan-700" />
                   <span className="text-sm">{action}</span>
                 </div>
               ))}
@@ -567,7 +567,7 @@ export default function GenericPage({ title, description, icon }: GenericPagePro
             {aiCharacters.map((character) => (
               <div key={character.id} className="rounded-lg border p-4">
                 <div className="flex gap-3">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-blue-700 text-2xl ring-2 ring-amber-300/70">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-blue-700 text-2xl ring-2 ring-cyan-300/70">
                     {character.avatar}
                   </div>
                   <div>
@@ -604,8 +604,8 @@ export default function GenericPage({ title, description, icon }: GenericPagePro
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
           <StatCard label="Usuarios" value="1,250" detail="Activos en plataforma" icon={<Users className="h-4 w-4" />} />
           <StatCard label="Estudiantes" value="1,118" detail="89% del total" icon={<GraduationCap className="h-4 w-4" />} tone="green" />
-          <StatCard label="Docentes" value="96" detail="32 activos hoy" icon={<UserCog className="h-4 w-4" />} tone="amber" />
-          <StatCard label="Administradores" value="36" detail="Con permisos avanzados" icon={<Shield className="h-4 w-4" />} tone="orange" />
+          <StatCard label="Docentes" value="96" detail="32 activos hoy" icon={<UserCog className="h-4 w-4" />} tone="cyan" />
+          <StatCard label="Administradores" value="36" detail="Con permisos avanzados" icon={<Shield className="h-4 w-4" />} tone="teal" />
         </div>
         <Card>
           <CardHeader>
@@ -644,7 +644,7 @@ export default function GenericPage({ title, description, icon }: GenericPagePro
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <StatCard label="Docentes activos" value={teachers.length} detail="Con cursos asignados" icon={<UserCog className="h-4 w-4" />} />
           <StatCard label="Cursos promedio" value="4.2" detail="Por docente" icon={<BookOpen className="h-4 w-4" />} tone="green" />
-          <StatCard label="Satisfacción" value="94%" detail="Encuestas de estudiantes" icon={<Award className="h-4 w-4" />} tone="amber" />
+          <StatCard label="Satisfacción" value="94%" detail="Encuestas de estudiantes" icon={<Award className="h-4 w-4" />} tone="cyan" />
         </div>
         <Card>
           <CardHeader>
@@ -706,7 +706,7 @@ export default function GenericPage({ title, description, icon }: GenericPagePro
     return (
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
         {plans.map((plan) => (
-          <Card key={plan.name} className={plan.name === 'Premium' ? 'border-amber-300 shadow-md' : ''}>
+          <Card key={plan.name} className={plan.name === 'Premium' ? 'border-cyan-300 shadow-md' : ''}>
             <CardHeader>
               <CardTitle>{plan.name}</CardTitle>
               <CardDescription>{plan.users}</CardDescription>
@@ -797,8 +797,8 @@ export default function GenericPage({ title, description, icon }: GenericPagePro
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
           <StatCard label="MRR" value="S/ 18.5k" detail="+8% mensual" icon={<CreditCard className="h-4 w-4" />} tone="green" />
           <StatCard label="Retención" value="91%" detail="Instituciones activas" icon={<Activity className="h-4 w-4" />} />
-          <StatCard label="Chats IA" value="4,237" detail="Últimos 7 días" icon={<Brain className="h-4 w-4" />} tone="amber" />
-          <StatCard label="Tickets" value="12" detail="3 urgentes" icon={<AlertCircle className="h-4 w-4" />} tone="orange" />
+          <StatCard label="Chats IA" value="4,237" detail="Últimos 7 días" icon={<Brain className="h-4 w-4" />} tone="cyan" />
+          <StatCard label="Tickets" value="12" detail="3 urgentes" icon={<AlertCircle className="h-4 w-4" />} tone="teal" />
         </div>
         <Tabs defaultValue="growth">
           <TabsList>
@@ -831,7 +831,7 @@ export default function GenericPage({ title, description, icon }: GenericPagePro
               <CardContent className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <StatCard label="Promedio plataforma" value="86.4" detail="Cursos activos" icon={<Award className="h-4 w-4" />} tone="green" />
                 <StatCard label="Finalización" value="73%" detail="Módulos completados" icon={<CheckCircle2 className="h-4 w-4" />} />
-                <StatCard label="Uso semanal" value="5.8 h" detail="Por estudiante" icon={<Clock className="h-4 w-4" />} tone="amber" />
+                <StatCard label="Uso semanal" value="5.8 h" detail="Por estudiante" icon={<Clock className="h-4 w-4" />} tone="cyan" />
               </CardContent>
             </Card>
           </TabsContent>
@@ -844,7 +844,7 @@ export default function GenericPage({ title, description, icon }: GenericPagePro
     return (
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <StatCard label="Módulo operativo" value="Activo" detail="Disponible para el equipo" icon={<Settings className="h-4 w-4" />} />
-        <StatCard label="Datos" value="Operativos" detail="Estructura lista para backend" icon={<SlidersHorizontal className="h-4 w-4" />} tone="amber" />
+        <StatCard label="Datos" value="Operativos" detail="Estructura lista para backend" icon={<SlidersHorizontal className="h-4 w-4" />} tone="cyan" />
         <StatCard label="Estado" value="Estable" detail="Sin pantalla vacía" icon={<CheckCircle2 className="h-4 w-4" />} tone="green" />
       </div>
     );

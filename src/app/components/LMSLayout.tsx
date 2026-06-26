@@ -108,7 +108,7 @@ export default function LMSLayout({ children }: LMSLayoutProps) {
 
   const roleColors = {
     student: 'bg-blue-100 text-blue-700',
-    teacher: 'bg-amber-100 text-amber-800',
+    teacher: 'bg-cyan-100 text-cyan-800',
     admin: 'bg-slate-100 text-slate-700'
   };
 
@@ -136,7 +136,7 @@ export default function LMSLayout({ children }: LMSLayoutProps) {
             </Button>
             
             <Link to="/dashboard" className="flex items-center gap-2">
-              <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center ring-2 ring-amber-300/70 overflow-hidden p-0.5">
+              <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center ring-2 ring-cyan-300/70 overflow-hidden p-0.5">
                 <img src={logoImg} alt="Cronos Digital Logo" className="w-full h-full object-contain" />
               </div>
               <span className="hidden sm:block text-lg font-bold text-blue-800">
@@ -165,7 +165,7 @@ export default function LMSLayout({ children }: LMSLayoutProps) {
               <DropdownMenuTrigger asChild>
                 <Button variant="ghost" className="gap-2">
                   <Avatar className="w-8 h-8">
-                    <AvatarFallback className="bg-blue-700 text-white text-sm ring-2 ring-amber-300/70">
+                    <AvatarFallback className="bg-blue-700 text-white text-sm ring-2 ring-cyan-300/70">
                       {user?.name.split(' ').map(n => n[0]).join('')}
                     </AvatarFallback>
                   </Avatar>

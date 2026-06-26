@@ -46,7 +46,7 @@ export default function Login() {
         >
           <div className="space-y-6">
             <div className="flex items-center gap-3">
-              <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center ring-4 ring-amber-300/60 overflow-hidden p-1">
+              <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center ring-4 ring-cyan-300/60 overflow-hidden p-1">
                 <img src={logoImg} alt="Cronos Digital Logo" className="w-full h-full object-contain" />
               </div>
               <div>
@@ -91,7 +91,7 @@ export default function Login() {
           <Card className="shadow-2xl">
             <CardHeader className="space-y-1">
               <div className="lg:hidden flex items-center justify-center gap-2 mb-4">
-                <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center ring-4 ring-amber-300/60 overflow-hidden p-0.5">
+                <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center ring-4 ring-cyan-300/60 overflow-hidden p-0.5">
                   <img src={logoImg} alt="Cronos Digital Logo" className="w-full h-full object-contain" />
                 </div>
                 <span className="text-2xl font-bold text-blue-800">
@@ -181,8 +181,8 @@ export default function Login() {
                     className="w-full justify-start gap-3 h-auto p-4"
                     onClick={() => quickLogin('teacher')}
                   >
-                    <div className="w-10 h-10 bg-amber-100 rounded-lg flex items-center justify-center">
-                      <Users className="w-5 h-5 text-amber-700" />
+                    <div className="w-10 h-10 bg-cyan-100 rounded-lg flex items-center justify-center">
+                      <Users className="w-5 h-5 text-cyan-700" />
                     </div>
                     <div className="text-left">
                       <div className="font-semibold">Docente</div>

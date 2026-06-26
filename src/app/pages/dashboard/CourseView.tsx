@@ -70,7 +70,7 @@ export default function CourseView() {
 
       {/* Course Header */}
       <div className="relative rounded-xl overflow-hidden">
-        <div className="h-48 bg-blue-700 flex items-center justify-center border-b-4 border-amber-300">
+        <div className="h-48 bg-blue-700 flex items-center justify-center border-b-4 border-cyan-400">
           <div className="text-white text-center px-4">
             <h1 className="text-3xl md:text-4xl font-bold mb-2">{course.title}</h1>
             <p className="text-lg text-white/90">{course.instructor}</p>
@@ -97,8 +97,8 @@ export default function CourseView() {
         <Card>
           <CardContent className="p-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-amber-100 rounded-lg flex items-center justify-center">
-                <BookOpen className="w-5 h-5 text-amber-700" />
+              <div className="w-10 h-10 bg-cyan-100 rounded-lg flex items-center justify-center">
+                <BookOpen className="w-5 h-5 text-cyan-700" />
               </div>
               <div>
                 <p className="text-sm text-gray-600">Módulos</p>
@@ -125,8 +125,8 @@ export default function CourseView() {
         <Card>
           <CardContent className="p-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center">
-                <Calendar className="w-5 h-5 text-orange-600" />
+              <div className="w-10 h-10 bg-cyan-100 rounded-lg flex items-center justify-center">
+                <Calendar className="w-5 h-5 text-cyan-700" />
               </div>
               <div>
                 <p className="text-sm text-gray-600">Finaliza</p>
@@ -207,7 +207,7 @@ export default function CourseView() {
                       <p className="text-xs text-gray-600">Lecciones completadas</p>
                     </div>
                     <div className="text-center">
-                      <p className="text-2xl font-bold text-amber-700">5</p>
+                      <p className="text-2xl font-bold text-cyan-700">5</p>
                       <p className="text-xs text-gray-600">Tareas entregadas</p>
                     </div>
                     <div className="text-center">
@@ -252,10 +252,10 @@ export default function CourseView() {
                     { title: 'Foro: Culturas Pre-incas', due: '2026-06-30', type: 'forum' }
                   ].map((activity, i) => (
                     <div key={i} className="flex items-start gap-3 p-3 border rounded-lg">
-                      <div className="w-8 h-8 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                        {activity.type === 'quiz' ? <FileText className="w-4 h-4 text-orange-600" /> :
-                         activity.type === 'assignment' ? <ClipboardList className="w-4 h-4 text-orange-600" /> :
-                         <MessageSquare className="w-4 h-4 text-orange-600" />}
+                      <div className="w-8 h-8 bg-cyan-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                        {activity.type === 'quiz' ? <FileText className="w-4 h-4 text-cyan-700" /> :
+                         activity.type === 'assignment' ? <ClipboardList className="w-4 h-4 text-cyan-700" /> :
+                         <MessageSquare className="w-4 h-4 text-cyan-700" />}
                       </div>
                       <div className="flex-1">
                         <p className="font-medium text-sm">{activity.title}</p>
@@ -322,7 +322,7 @@ export default function CourseView() {
                         {module.materials.map((material) => (
                           <div key={material.id} className="flex items-center justify-between p-3 border rounded-lg hover:bg-gray-50">
                             <div className="flex items-center gap-3">
-                              {material.type === 'video' ? <Play className="w-4 h-4 text-amber-700" /> :
+                              {material.type === 'video' ? <Play className="w-4 h-4 text-cyan-700" /> :
                                material.type === 'pdf' ? <FileDown className="w-4 h-4 text-red-600" /> :
                                <FileText className="w-4 h-4 text-blue-600" />}
                               <div>
@@ -338,7 +338,7 @@ export default function CourseView() {
                         {module.assignments.map((assignment) => (
                           <div key={assignment.id} className="flex items-center justify-between p-3 border rounded-lg hover:bg-gray-50">
                             <div className="flex items-center gap-3">
-                              <ClipboardList className="w-4 h-4 text-orange-600" />
+                              <ClipboardList className="w-4 h-4 text-cyan-700" />
                               <div>
                                 <p className="font-medium text-sm">{assignment.title}</p>
                                 <p className="text-xs text-gray-500">Vence {new Date(assignment.dueDate).toLocaleDateString('es-ES')}</p>
@@ -370,10 +370,10 @@ export default function CourseView() {
                   <div key={material.id} className="flex items-center justify-between p-4 border rounded-lg hover:bg-gray-50">
                     <div className="flex items-center gap-4">
                       <div className={`w-12 h-12 rounded-lg flex items-center justify-center ${
-                        material.type === 'video' ? 'bg-amber-100' :
+                        material.type === 'video' ? 'bg-cyan-100' :
                         material.type === 'pdf' ? 'bg-red-100' : 'bg-blue-100'
                       }`}>
-                        {material.type === 'video' ? <Play className="w-6 h-6 text-amber-700" /> :
+                        {material.type === 'video' ? <Play className="w-6 h-6 text-cyan-700" /> :
                          material.type === 'pdf' ? <FileDown className="w-6 h-6 text-red-600" /> :
                          <FileText className="w-6 h-6 text-blue-600" />}
                       </div>
@@ -524,7 +524,7 @@ export default function CourseView() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {Array.from({ length: 8 }, (_, i) => (
                   <div key={i} className="flex items-center gap-3 p-3 border rounded-lg">
-                    <div className="w-10 h-10 bg-blue-700 rounded-full flex items-center justify-center text-white font-semibold ring-2 ring-amber-300/70">
+                    <div className="w-10 h-10 bg-blue-700 rounded-full flex items-center justify-center text-white font-semibold ring-2 ring-cyan-300/70">
                       {String.fromCharCode(65 + i)}
                     </div>
                     <div>

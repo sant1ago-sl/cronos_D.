@@ -146,7 +146,7 @@ export default function AITutor() {
                   <div className="flex items-center gap-3">
                     {selectedCharacter ? (
                       <>
-                        <div className="w-10 h-10 bg-blue-700 rounded-full flex items-center justify-center text-2xl ring-2 ring-amber-300/70">
+                        <div className="w-10 h-10 bg-blue-700 rounded-full flex items-center justify-center text-2xl ring-2 ring-cyan-300/70">
                           {aiCharacters.find(c => c.id === selectedCharacter)?.avatar}
                         </div>
                         <div>
@@ -160,7 +160,7 @@ export default function AITutor() {
                       </>
                     ) : (
                       <>
-                        <div className="w-10 h-10 bg-blue-700 rounded-full flex items-center justify-center ring-2 ring-amber-300/70">
+                        <div className="w-10 h-10 bg-blue-700 rounded-full flex items-center justify-center ring-2 ring-cyan-300/70">
                           <Brain className="w-6 h-6 text-white" />
                         </div>
                         <div>
@@ -186,7 +186,7 @@ export default function AITutor() {
                 <ScrollArea className="flex-1 p-4" ref={scrollAreaRef}>
                   {messages.length === 0 ? (
                     <div className="flex flex-col items-center justify-center h-full text-center p-8">
-                      <div className="w-20 h-20 bg-blue-50 rounded-full flex items-center justify-center mb-4 ring-4 ring-amber-100">
+                      <div className="w-20 h-20 bg-cyan-50 rounded-full flex items-center justify-center mb-4 ring-4 ring-cyan-100">
                         <Sparkles className="w-10 h-10 text-blue-600" />
                       </div>
                       <h3 className="text-xl font-bold mb-2">¡Hola! Soy tu Tutor IA</h3>
@@ -371,7 +371,7 @@ export default function AITutor() {
                 >
                   <CardHeader>
                     <div className="flex items-start gap-4">
-                      <div className="w-16 h-16 bg-blue-700 rounded-full flex items-center justify-center text-4xl flex-shrink-0 ring-4 ring-amber-100">
+                      <div className="w-16 h-16 bg-blue-700 rounded-full flex items-center justify-center text-4xl flex-shrink-0 ring-4 ring-cyan-100">
                         {character.avatar}
                       </div>
                       <div className="flex-1">

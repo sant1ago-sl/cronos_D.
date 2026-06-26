@@ -106,7 +106,7 @@ export default function Courses() {
           <Card>
             <CardHeader className="flex flex-row items-center justify-between pb-2">
               <CardTitle className="text-sm font-medium text-gray-600">Progreso Promedio</CardTitle>
-              <Clock className="w-4 h-4 text-amber-700" />
+              <Clock className="w-4 h-4 text-cyan-700" />
             </CardHeader>
             <CardContent>
               <div className="text-2xl font-bold">
@@ -135,7 +135,7 @@ export default function Courses() {
           {filteredCourses.map((course) => (
             <Card key={course.id} className="hover:shadow-lg transition-shadow group">
               <div className="h-40 bg-blue-700 rounded-t-lg relative overflow-hidden">
-                <div className="absolute inset-x-0 bottom-0 h-2 bg-amber-300" />
+                <div className="absolute inset-x-0 bottom-0 h-2 bg-cyan-400" />
                 <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(255,255,255,0.12)_0%,transparent_45%)] group-hover:bg-black/10 transition-colors" />
                 <div className="absolute top-4 right-4">
                   <Badge className="bg-white/90 text-gray-900">
@@ -175,7 +175,7 @@ export default function Courses() {
             <Card key={course.id} className="hover:shadow-lg transition-shadow">
               <CardContent className="p-6">
                 <div className="flex flex-col md:flex-row gap-6">
-                  <div className="w-full md:w-48 h-32 bg-blue-700 rounded-lg flex-shrink-0 border-b-4 border-amber-300" />
+                  <div className="w-full md:w-48 h-32 bg-blue-700 rounded-lg flex-shrink-0 border-b-4 border-cyan-400" />
                   <div className="flex-1 space-y-3">
                     <div className="flex items-start justify-between">
                       <div>

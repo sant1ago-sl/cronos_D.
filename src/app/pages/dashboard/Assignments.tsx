@@ -29,7 +29,7 @@ export default function Assignments() {
             </Badge>
           )}
           {assignment.status === 'pending' && (
-            <Badge variant="outline" className="bg-orange-50 text-orange-700">
+            <Badge variant="outline" className="bg-cyan-50 text-cyan-700">
               Por entregar
             </Badge>
           )}
@@ -105,7 +105,7 @@ export default function Assignments() {
         <Card>
           <CardHeader className="flex flex-row items-center justify-between pb-2">
           <CardTitle className="text-sm font-medium text-gray-600">Por entregar</CardTitle>
-            <AlertCircle className="w-4 h-4 text-orange-600" />
+            <AlertCircle className="w-4 h-4 text-cyan-700" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">{pendingAssignments.length}</div>

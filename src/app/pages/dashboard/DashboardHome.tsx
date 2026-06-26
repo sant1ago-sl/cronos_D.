@@ -59,7 +59,7 @@ function StudentDashboard() {
         <Card>
           <CardHeader className="flex flex-row items-center justify-between pb-2">
             <CardTitle className="text-sm font-medium text-gray-600">Tareas por entregar</CardTitle>
-            <AlertCircle className="w-4 h-4 text-orange-600" />
+            <AlertCircle className="w-4 h-4 text-cyan-700" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">5</div>
@@ -81,7 +81,7 @@ function StudentDashboard() {
         <Card>
           <CardHeader className="flex flex-row items-center justify-between pb-2">
             <CardTitle className="text-sm font-medium text-gray-600">Horas Estudiadas</CardTitle>
-            <Clock className="w-4 h-4 text-amber-700" />
+            <Clock className="w-4 h-4 text-cyan-700" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">24h</div>
@@ -159,13 +159,13 @@ function StudentDashboard() {
           <Card>
             <CardHeader>
               <CardTitle className="text-lg flex items-center gap-2">
-                <AlertCircle className="w-5 h-5 text-orange-600" />
+                <AlertCircle className="w-5 h-5 text-cyan-700" />
                 Próximas Tareas
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-3">
               {upcomingAssignments.map((assignment) => (
-                <div key={assignment.id} className="border-l-4 border-orange-500 pl-3 py-2">
+                <div key={assignment.id} className="border-l-4 border-cyan-500 pl-3 py-2">
                   <p className="font-medium text-sm">{assignment.title}</p>
                   <div className="flex items-center gap-2 text-xs text-gray-500 mt-1">
                     <Calendar className="w-3 h-3" />
@@ -221,13 +221,13 @@ function StudentDashboard() {
           <Card>
             <CardHeader>
               <CardTitle className="text-lg flex items-center gap-2">
-                <Award className="w-5 h-5 text-yellow-600" />
+                <Award className="w-5 h-5 text-cyan-700" />
                 Logros Recientes
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-3">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-yellow-100 rounded-full flex items-center justify-center">
+                <div className="w-10 h-10 bg-cyan-100 rounded-full flex items-center justify-center">
                   🏆
                 </div>
                 <div>
@@ -284,7 +284,7 @@ function TeacherDashboard() {
         <Card>
           <CardHeader className="flex flex-row items-center justify-between pb-2">
             <CardTitle className="text-sm font-medium text-gray-600">Tareas por Revisar</CardTitle>
-            <AlertCircle className="w-4 h-4 text-orange-600" />
+            <AlertCircle className="w-4 h-4 text-cyan-700" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">12</div>
@@ -391,7 +391,7 @@ function AdminDashboard() {
         <Card>
           <CardHeader className="flex flex-row items-center justify-between pb-2">
             <CardTitle className="text-sm font-medium text-gray-600">Cursos Totales</CardTitle>
-            <BookOpen className="w-4 h-4 text-amber-700" />
+            <BookOpen className="w-4 h-4 text-cyan-700" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">132</div>
@@ -413,7 +413,7 @@ function AdminDashboard() {
         <Card>
           <CardHeader className="flex flex-row items-center justify-between pb-2">
             <CardTitle className="text-sm font-medium text-gray-600">Ingresos MRR</CardTitle>
-            <BarChart3 className="w-4 h-4 text-orange-600" />
+            <BarChart3 className="w-4 h-4 text-cyan-700" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">S/ 18.5k</div>

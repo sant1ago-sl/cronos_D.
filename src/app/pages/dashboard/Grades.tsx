@@ -88,7 +88,7 @@ export default function Grades() {
                     className={
                       (grade.finalGrade || 0) >= 90 ? 'bg-green-50 text-green-700' :
                       (grade.finalGrade || 0) >= 80 ? 'bg-blue-50 text-blue-700' :
-                      (grade.finalGrade || 0) >= 70 ? 'bg-yellow-50 text-yellow-700' :
+                      (grade.finalGrade || 0) >= 70 ? 'bg-cyan-50 text-cyan-700' :
                       'bg-red-50 text-red-700'
                     }
                   >
@@ -107,7 +107,7 @@ export default function Grades() {
               {grade.assignments.length > 0 && (
                 <div>
                   <h4 className="font-semibold mb-3 flex items-center gap-2">
-                    <Award className="w-4 h-4 text-orange-600" />
+                    <Award className="w-4 h-4 text-cyan-700" />
                     Tareas ({grade.assignments.length})
                   </h4>
                   <div className="space-y-2">
@@ -128,7 +128,7 @@ export default function Grades() {
                           {assignment.grade / assignment.maxGrade >= 0.9 ? (
                             <TrendingUp className="w-4 h-4 text-green-600" />
                           ) : assignment.grade / assignment.maxGrade >= 0.7 ? (
-                            <Minus className="w-4 h-4 text-yellow-600" />
+                            <Minus className="w-4 h-4 text-cyan-700" />
                           ) : (
                             <TrendingDown className="w-4 h-4 text-red-600" />
                           )}
@@ -143,7 +143,7 @@ export default function Grades() {
               {grade.quizzes.length > 0 && (
                 <div>
                   <h4 className="font-semibold mb-3 flex items-center gap-2">
-                    <Award className="w-4 h-4 text-amber-700" />
+                    <Award className="w-4 h-4 text-cyan-700" />
                     Evaluaciones ({grade.quizzes.length})
                   </h4>
                   <div className="space-y-2">
@@ -164,7 +164,7 @@ export default function Grades() {
                           {quiz.grade / quiz.maxGrade >= 0.9 ? (
                             <TrendingUp className="w-4 h-4 text-green-600" />
                           ) : quiz.grade / quiz.maxGrade >= 0.7 ? (
-                            <Minus className="w-4 h-4 text-yellow-600" />
+                            <Minus className="w-4 h-4 text-cyan-700" />
                           ) : (
                             <TrendingDown className="w-4 h-4 text-red-600" />
                           )}
