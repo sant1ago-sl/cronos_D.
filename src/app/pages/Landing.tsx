@@ -11,11 +11,12 @@ import {
   GraduationCap,
   Landmark,
   Layers3,
+  MapPin,
   Menu,
   MessageSquare,
   PlayCircle,
   ShieldCheck,
-  Sparkles,
+  Smartphone,
   Users,
   X
 } from 'lucide-react';
@@ -27,10 +28,24 @@ import logoImg from '../logo/logo.jpeg';
 const heroImage = 'https://images.unsplash.com/photo-1526392060635-9d6019884377?auto=format&fit=crop&w=1800&q=80';
 
 const metrics = [
-  { label: 'estudiantes objetivo', value: '12-18' },
-  { label: 'mercado inicial', value: 'Lima' },
-  { label: 'web y móvil', value: '2x' },
-  { label: 'modelo B2B/B2C', value: '100%' }
+  {
+    icon: Users,
+    label: 'Comunidad educativa',
+    value: 'Estudiantes y docentes',
+    detail: 'Pensado para instituciones que buscan una experiencia moderna, participativa y fácil de adoptar.'
+  },
+  {
+    icon: MapPin,
+    label: 'Mercado inicial',
+    value: 'Lima Metropolitana',
+    detail: 'Primera etapa enfocada en colegios urbanos con acceso a internet y dispositivos.'
+  },
+  {
+    icon: Smartphone,
+    label: 'Acceso multiplataforma',
+    value: 'Web y móvil',
+    detail: 'Disponible para clases, refuerzo académico, tareas y aprendizaje autónomo.'
+  }
 ];
 
 const modules = [
@@ -168,10 +183,6 @@ export default function Landing() {
             transition={{ duration: 0.7 }}
             className="max-w-4xl"
           >
-            <Badge className="mb-5 bg-amber-300 text-slate-950 hover:bg-amber-300">
-              <Sparkles className="mr-1 h-3 w-3" />
-              Campaña: Habla con la Historia
-            </Badge>
             <h1 className="max-w-4xl text-5xl font-bold leading-tight text-white sm:text-6xl lg:text-7xl">
               Cronos Digital - Aprendiendo Historia
             </h1>
@@ -197,11 +208,15 @@ export default function Landing() {
             </div>
           </motion.div>
 
-          <div className="mt-14 grid max-w-4xl grid-cols-2 gap-3 md:grid-cols-4">
+          <div className="mt-14 grid max-w-5xl grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {metrics.map((metric) => (
-              <div key={metric.label} className="border-l border-white/25 bg-white/10 p-4 backdrop-blur">
-                <div className="text-3xl font-bold text-white">{metric.value}</div>
-                <div className="text-sm text-slate-200">{metric.label}</div>
+              <div key={metric.label} className="border border-white/15 bg-slate-950/35 p-4 shadow-lg backdrop-blur-md">
+                <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-lg bg-amber-300 text-slate-950">
+                  <metric.icon className="h-5 w-5" />
+                </div>
+                <div className="text-sm font-semibold uppercase tracking-wide text-amber-200">{metric.label}</div>
+                <div className="mt-1 text-2xl font-bold text-white">{metric.value}</div>
+                <p className="mt-2 text-sm leading-relaxed text-slate-200">{metric.detail}</p>
               </div>
             ))}
           </div>
