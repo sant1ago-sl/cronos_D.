@@ -268,13 +268,13 @@ export default function Landing() {
             transition={{ duration: 0.7 }}
             className="max-w-4xl"
           >
-            <h1 className="max-w-4xl text-5xl font-bold leading-tight text-white sm:text-6xl lg:text-7xl">
+            <h1 className="max-w-4xl text-4xl font-bold leading-tight text-white sm:text-5xl lg:text-7xl">
               Cronos Digital - Aprendiendo Historia
             </h1>
-            <p className="mt-5 max-w-3xl text-xl font-medium text-blue-50 sm:text-2xl">
+            <p className="mt-5 max-w-3xl text-lg font-medium text-blue-50 sm:text-2xl">
               Vive la historia, no solo la estudies.
             </p>
-            <p className="mt-5 max-w-2xl text-lg text-slate-200">
+            <p className="mt-5 max-w-2xl text-base text-slate-200 sm:text-lg">
               Plataforma web y móvil para estudiantes de secundaria, docentes e instituciones. Convierte la enseñanza tradicional en una experiencia inmersiva con personajes históricos, chat, voz, actividades y gestión académica.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -312,7 +312,7 @@ export default function Landing() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <Badge variant="outline" className="mb-4">Plataforma</Badge>
-            <h2 className="text-4xl font-bold">Historia interactiva con gestión académica real</h2>
+            <h2 className="text-3xl font-bold sm:text-4xl">Historia interactiva con gestión académica real</h2>
             <p className="mt-4 text-lg text-slate-600">
               La propuesta une educación, tecnología y entretenimiento para incrementar interés, participación y retención del conocimiento histórico.
             </p>
@@ -355,7 +355,7 @@ export default function Landing() {
           <div className="grid grid-cols-1 gap-8 xl:grid-cols-[0.9fr_1.1fr] xl:items-start">
             <div className="max-w-xl">
               <Badge variant="outline" className="mb-4">Experiencia visual</Badge>
-              <h2 className="text-4xl font-bold text-slate-950">Personajes y referencias que vuelven mas viva la historia</h2>
+              <h2 className="text-3xl font-bold text-slate-950 sm:text-4xl">Personajes y referencias que vuelven mas viva la historia</h2>
               <p className="mt-4 text-lg text-slate-600">
                 Cronos puede mostrar mejor el tipo de experiencia que promete: una plataforma donde las figuras historicas, sus decisiones y sus contextos se vuelven parte del recorrido.
               </p>
@@ -407,7 +407,7 @@ export default function Landing() {
           <div className="grid grid-cols-1 gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
             <div>
               <Badge variant="outline" className="mb-4">Roles</Badge>
-              <h2 className="text-4xl font-bold">Segmentación clara desde el producto</h2>
+              <h2 className="text-3xl font-bold sm:text-4xl">Segmentación clara desde el producto</h2>
               <p className="mt-4 text-lg text-slate-600">
                 El informe define un mercado inicial en Perú, con foco en Lima Metropolitana, estudiantes de secundaria y colegios con apertura a herramientas digitales.
               </p>
@@ -470,7 +470,7 @@ export default function Landing() {
         <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
           <div>
             <Badge className="mb-4 bg-blue-100 text-blue-800 hover:bg-blue-100">Misión y valores</Badge>
-            <h2 className="text-4xl font-bold">Tecnología educativa con propósito</h2>
+            <h2 className="text-3xl font-bold sm:text-4xl">Tecnología educativa con propósito</h2>
             <p className="mt-4 text-lg text-slate-300">
               Cronos Digital busca brindar soluciones educativas innovadoras mediante inteligencia artificial y herramientas interactivas, fortaleciendo pensamiento crítico, accesibilidad digital y aprendizaje significativo.
             </p>
@@ -500,7 +500,7 @@ export default function Landing() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mb-10 max-w-3xl">
             <Badge variant="outline" className="mb-4">Recorrido visual</Badge>
-            <h2 className="text-4xl font-bold text-slate-950">La historia tambien entra por la escena, el gesto y el paisaje</h2>
+            <h2 className="text-3xl font-bold text-slate-950 sm:text-4xl">La historia tambien entra por la escena, el gesto y el paisaje</h2>
             <p className="mt-4 text-lg text-slate-600">
               Debajo del hero, la landing necesitaba respirar mejor. Por eso sumamos imagenes que hacen mas evidente la promesa del producto: aprender historia con ambiente, personajes y contexto.
             </p>
@@ -528,7 +528,7 @@ export default function Landing() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mb-10 max-w-3xl">
             <Badge variant="outline" className="mb-4">Planes</Badge>
-            <h2 className="text-4xl font-bold">Precios de penetración para adopción rápida</h2>
+            <h2 className="text-3xl font-bold sm:text-4xl">Precios de penetración para adopción rápida</h2>
             <p className="mt-4 text-lg text-slate-600">Planes accesibles para estudiantes y colegios, alineados a la estrategia inicial de entrada al mercado.</p>
             <p className="mt-3 text-sm leading-relaxed text-slate-500">
               La propuesta parte con una base accesible, pero está pensada para crecer hacia programas institucionales donde Historia pueda convertirse en una experiencia distintiva dentro del colegio.

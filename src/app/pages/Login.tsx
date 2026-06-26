@@ -75,26 +75,26 @@ export default function Login() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-100 px-4 py-8 sm:px-6 lg:px-8">
-      <div className="mx-auto grid min-h-[calc(100vh-4rem)] max-w-6xl grid-cols-1 overflow-hidden border border-slate-200 bg-white shadow-[0_24px_80px_-48px_rgba(15,23,42,0.45)] lg:grid-cols-[1.05fr_0.95fr]">
+    <div className="min-h-screen bg-slate-100 px-4 py-4 sm:px-6 sm:py-6 lg:px-8 lg:py-8">
+      <div className="mx-auto grid w-full max-w-6xl grid-cols-1 overflow-hidden border border-slate-200 bg-white shadow-[0_24px_80px_-48px_rgba(15,23,42,0.45)] lg:min-h-[calc(100vh-4rem)] lg:grid-cols-[1.05fr_0.95fr]">
         <motion.section
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          className="flex flex-col justify-between border-b border-slate-200 bg-slate-950 px-6 py-8 text-white lg:border-b-0 lg:border-r lg:px-10 lg:py-10"
+          className="flex flex-col justify-between border-b border-slate-200 bg-slate-950 px-5 py-6 text-white sm:px-6 sm:py-8 lg:border-b-0 lg:border-r lg:px-8 lg:py-10"
         >
           <div>
             <div className="flex items-center gap-4">
-              <div className="flex h-14 w-14 items-center justify-center overflow-hidden rounded-md bg-white p-1">
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center overflow-hidden rounded-md bg-white p-1 sm:h-14 sm:w-14">
                 <img src={logoImg} alt="Cronos Digital Logo" className="h-full w-full object-contain" />
               </div>
               <div>
                 <p className="text-xs font-semibold uppercase tracking-[0.24em] text-cyan-300">Cronos Digital</p>
-                <h1 className="text-2xl font-semibold text-white">Acceso a la plataforma</h1>
+                <h1 className="text-xl font-semibold text-white sm:text-2xl">Acceso a la plataforma</h1>
               </div>
             </div>
 
             <div className="mt-10 max-w-xl space-y-4">
-              <h2 className="text-3xl font-semibold leading-tight text-white sm:text-4xl">
+              <h2 className="text-2xl font-semibold leading-tight text-white sm:text-3xl lg:text-4xl">
                 Un ingreso mas sobrio para una plataforma educativa real.
               </h2>
               <p className="text-sm leading-7 text-slate-300 sm:text-base">
@@ -102,10 +102,10 @@ export default function Login() {
               </p>
             </div>
 
-            <div className="mt-10 grid gap-4">
+            <div className="mt-8 grid gap-3 sm:gap-4">
               {highlights.map((item) => (
-                <div key={item.title} className="grid grid-cols-[44px_1fr] gap-4 border border-white/10 bg-white/5 p-4">
-                  <div className="flex h-11 w-11 items-center justify-center bg-cyan-400/12 text-cyan-300">
+                <div key={item.title} className="grid grid-cols-[40px_1fr] gap-3 border border-white/10 bg-white/5 p-3 sm:grid-cols-[44px_1fr] sm:gap-4 sm:p-4">
+                  <div className="flex h-10 w-10 items-center justify-center bg-cyan-400/12 text-cyan-300 sm:h-11 sm:w-11">
                     <item.icon className="h-5 w-5" />
                   </div>
                   <div>
@@ -126,7 +126,7 @@ export default function Login() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.05 }}
-          className="flex items-center px-4 py-6 sm:px-6 lg:px-10"
+          className="flex items-center px-4 py-5 sm:px-6 sm:py-6 lg:px-8 lg:py-8"
         >
           <div className="w-full">
             <div className="mb-6 lg:hidden">
@@ -143,7 +143,7 @@ export default function Login() {
 
             <Card className="border-slate-200 shadow-none">
               <CardHeader className="space-y-2 border-b border-slate-100 pb-6">
-                <CardTitle className="text-2xl font-semibold text-slate-950">Iniciar sesion</CardTitle>
+                <CardTitle className="text-xl font-semibold text-slate-950 sm:text-2xl">Iniciar sesion</CardTitle>
                 <CardDescription className="text-sm leading-6 text-slate-500">
                   Ingresa con tus credenciales o revisa la plataforma desde uno de los accesos de prueba.
                 </CardDescription>
@@ -154,13 +154,13 @@ export default function Login() {
                   <TabsList className="grid h-auto w-full grid-cols-2 rounded-md border border-slate-200 bg-slate-50 p-1">
                     <TabsTrigger
                       value="login"
-                      className="rounded-sm px-3 py-2 text-sm data-[state=active]:bg-white data-[state=active]:text-slate-950 data-[state=active]:shadow-sm"
+                      className="rounded-sm px-2 py-2 text-xs sm:px-3 sm:text-sm data-[state=active]:bg-white data-[state=active]:text-slate-950 data-[state=active]:shadow-sm"
                     >
                       Ingresar
                     </TabsTrigger>
                     <TabsTrigger
                       value="demo"
-                      className="rounded-sm px-3 py-2 text-sm data-[state=active]:bg-white data-[state=active]:text-slate-950 data-[state=active]:shadow-sm"
+                      className="rounded-sm px-2 py-2 text-xs sm:px-3 sm:text-sm data-[state=active]:bg-white data-[state=active]:text-slate-950 data-[state=active]:shadow-sm"
                     >
                       Acceso rapido
                     </TabsTrigger>
@@ -194,7 +194,7 @@ export default function Login() {
                         />
                       </div>
 
-                      <div className="flex items-center justify-between gap-4 text-sm">
+                      <div className="flex flex-col gap-3 text-sm sm:flex-row sm:items-center sm:justify-between sm:gap-4">
                         <label className="flex items-center gap-2 text-slate-600">
                           <input type="checkbox" className="h-4 w-4 border-slate-300 accent-cyan-700" />
                           Mantener sesion
@@ -224,9 +224,9 @@ export default function Login() {
                         key={item.role}
                         type="button"
                         onClick={() => quickLogin(item.role)}
-                        className="grid w-full grid-cols-[44px_1fr] gap-4 border border-slate-200 bg-white px-4 py-4 text-left transition hover:border-cyan-300 hover:bg-slate-50"
+                        className="grid w-full grid-cols-[40px_1fr] gap-3 border border-slate-200 bg-white px-3 py-3 text-left transition hover:border-cyan-300 hover:bg-slate-50 sm:grid-cols-[44px_1fr] sm:gap-4 sm:px-4 sm:py-4"
                       >
-                        <div className="flex h-11 w-11 items-center justify-center bg-slate-100 text-slate-700">
+                        <div className="flex h-10 w-10 items-center justify-center bg-slate-100 text-slate-700 sm:h-11 sm:w-11">
                           <item.icon className="h-5 w-5" />
                         </div>
                         <div>
